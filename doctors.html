@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiny Hunters Hospital | Doctors</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #263238;
+            background: #F8FAFB;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0B7285;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #F4A261;
+        }
+
+        .page-header {
+            background: #DFF6F8;
+            text-align: center;
+            padding: 60px 8%;
+        }
+
+        .page-header h1 {
+            color: #0B7285;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .doctors-section {
+            padding: 60px 8%;
+        }
+
+        .doctors-section h2 {
+            text-align: center;
+            color: #0B7285;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .doctor-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            padding-bottom: 25px;
+        }
+
+        .doctor-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .doctor-card h3 {
+            color: #0B7285;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        .doctor-card h4 {
+            color: #F4A261;
+            margin-bottom: 10px;
+        }
+
+        .doctor-card p {
+            padding: 0 20px;
+        }
+
+        .appointment {
+            background: #DFF6F8;
+            text-align: center;
+            padding: 45px 8%;
+            margin-top: 20px;
+        }
+
+        .appointment h2 {
+            color: #0B7285;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0B7285;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #064653;
+        }
+
+        footer {
+            background: #064653;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+                display: inline-block;
+            }
+
+            .doctor-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">🏥 Shiny Hunters Hospital</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="page-header">
+
+    <h1>Our Doctors</h1>
+
+    <p>
+        Meet our dedicated team of qualified healthcare professionals.
+    </p>
+
+</section>
+
+
+<section class="doctors-section">
+
+    <h2>Meet Our Medical Team</h2>
+
+    <p class="intro">
+        At Shiny Hunters Hospital, our doctors are committed to providing
+        professional, compassionate and patient-centred healthcare.
+    </p>
+
+
+    <div class="doctor-grid">
+
+        <div class="doctor-card">
+
+            <img src="images/doctor1.jpg" alt="Dr. Sarah Mwangi">
+
+            <h3>Dr. Sarah Mwangi</h3>
+
+            <h4>General Physician</h4>
+
+            <p>
+                Experienced in diagnosing and managing a wide range of
+                medical conditions while providing personalised patient care.
+            </p>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <img src="images/doctor2.jpg" alt="Dr. Daniel Otieno">
+
+            <h3>Dr. Daniel Otieno</h3>
+
+            <h4>Surgeon</h4>
+
+            <p>
+                Specialises in surgical care and works closely with patients
+                to ensure safe and effective treatment.
+            </p>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <img src="images/doctor3.jpg" alt="Dr. Amina Hassan">
+
+            <h3>Dr. Amina Hassan</h3>
+
+            <h4>Paediatrician</h4>
+
+            <p>
+                Dedicated to providing quality healthcare for children
+                and supporting families throughout their healthcare journey.
+            </p>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <img src="images/doctor4.jpg" alt="Dr. James Kamau">
+
+            <h3>Dr. James Kamau</h3>
+
+            <h4>Cardiologist</h4>
+
+            <p>
+                Focuses on the prevention, diagnosis and treatment of
+                cardiovascular conditions.
+            </p>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <img src="images/doctor5.jpg" alt="Dr. Mary Wanjiku">
+
+            <h3>Dr. Mary Wanjiku</h3>
+
+            <h4>Gynaecologist</h4>
+
+            <p>
+                Provides professional women's healthcare services with
+                a focus on compassionate and respectful patient care.
+            </p>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <img src="images/doctor6.jpg" alt="Dr. Brian Kiptoo">
+
+            <h3>Dr. Brian Kiptoo</h3>
+
+            <h4>Emergency Physician</h4>
+
+            <p>
+                Provides rapid assessment and treatment for patients
+                requiring urgent medical attention.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="appointment">
+
+    <h2>Need to See a Doctor?</h2>
+
+    <p>
+        Contact Shiny Hunters Hospital today to learn more about our
+        medical services and schedule an appointment.
+    </p>
+
+    <a href="contact.html" class="btn">Contact Us</a>
+
+</section>
+
+
+<footer>
+
+    <p>&copy; 2026 Shiny Hunters Hospital. All Rights Reserved.</p>
+
+    <p>Quality Care • Compassion • Excellence</p>
+
+</footer>
+
+</body>
+</html>

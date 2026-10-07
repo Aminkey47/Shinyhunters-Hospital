@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiny Hunters Hospital | Home</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #263238;
+            background: #F8FAFB;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0B7285;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #F4A261;
+        }
+
+        .hero {
+            min-height: 520px;
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(
+                rgba(11, 114, 133, 0.88),
+                rgba(11, 114, 133, 0.88)
+            ),
+            url("images/hospital.jpg");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #F4A261;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #0B7285;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .section-intro {
+            max-width: 700px;
+            margin: 0 auto 35px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #0B7285;
+            margin-bottom: 10px;
+        }
+
+        .emergency {
+            background: #DFF6F8;
+            padding: 40px 8%;
+            text-align: center;
+        }
+
+        .emergency h2 {
+            color: #0B7285;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #064653;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+                display: inline-block;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🏥 Shiny Hunters Hospital</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Quality Healthcare You Can Trust</h1>
+
+        <p>
+            Welcome to Shiny Hunters Hospital, where compassionate care,
+            modern healthcare and professional medical services come together
+            to improve the lives of our patients.
+        </p>
+
+        <a href="contact.html" class="btn">Contact Us</a>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Welcome to Shiny Hunters Hospital</h2>
+
+    <p class="section-intro">
+        We are committed to providing safe, accessible and patient-centred
+        healthcare services for individuals, families and communities.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Emergency Care</h3>
+            <p>
+                Fast and professional medical attention for urgent
+                healthcare needs.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Qualified Doctors</h3>
+            <p>
+                Our healthcare team is dedicated to providing professional
+                and compassionate patient care.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Modern Facilities</h3>
+            <p>
+                We provide a comfortable healthcare environment supported
+                by modern medical facilities.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="emergency">
+    <h2>Need Medical Assistance?</h2>
+
+    <p>
+        Contact Shiny Hunters Hospital today and let our team help you
+        with your healthcare needs.
+    </p>
+
+    <br>
+
+    <a href="contact.html" class="btn">Get in Touch</a>
+</section>
+
+<footer>
+    <p>&copy; 2026 Shiny Hunters Hospital. All Rights Reserved.</p>
+    <p>Quality Care • Compassion • Excellence</p>
+</footer>
+
+</body>
+</html>
