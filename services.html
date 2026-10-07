@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiny Hunters Hospital | Services</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #263238;
+            background: #F8FAFB;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0B7285;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #F4A261;
+        }
+
+        .page-header {
+            background: #DFF6F8;
+            text-align: center;
+            padding: 60px 8%;
+        }
+
+        .page-header h1 {
+            color: #0B7285;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 18px;
+        }
+
+        .services-section {
+            padding: 60px 8%;
+        }
+
+        .services-section h2 {
+            text-align: center;
+            color: #0B7285;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #0B7285;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .service-card p {
+            font-size: 15px;
+        }
+
+        .cta {
+            background: #DFF6F8;
+            text-align: center;
+            padding: 50px 8%;
+            margin-top: 20px;
+        }
+
+        .cta h2 {
+            color: #0B7285;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0B7285;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #064653;
+        }
+
+        footer {
+            background: #064653;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 1000px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+                display: inline-block;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">🏥 Shiny Hunters Hospital</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="doctors.html">Doctors</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <section class="page-header">
+
+        <h1>Our Services</h1>
+
+        <p>
+            Quality healthcare services designed around the needs of our patients.
+        </p>
+
+    </section>
+
+
+    <section class="services-section">
+
+        <h2>Healthcare Services</h2>
+
+        <p class="intro">
+            Shiny Hunters Hospital provides a wide range of healthcare
+            services delivered by dedicated medical professionals in a
+            safe and comfortable environment.
+        </p>
+
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-icon">🚑</div>
+
+                <h3>Emergency Care</h3>
+
+                <p>
+                    Our emergency department provides prompt medical
+                    attention for patients with urgent illnesses,
+                    injuries and other medical emergencies.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">🩺</div>
+
+                <h3>Outpatient Services</h3>
+
+                <p>
+                    We provide consultations, diagnosis, treatment and
+                    follow-up care for patients who do not require
+                    hospital admission.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">🔬</div>
+
+                <h3>Laboratory Services</h3>
+
+                <p>
+                    Our laboratory provides diagnostic testing that helps
+                    healthcare professionals accurately identify and
+                    manage medical conditions.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">💊</div>
+
+                <h3>Pharmacy</h3>
+
+                <p>
+                    Our pharmacy provides prescribed medicines and
+                    professional guidance to help patients use their
+                    medication safely and effectively.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">👶</div>
+
+                <h3>Maternity Care</h3>
+
+                <p>
+                    We provide maternity services including antenatal
+                    care, delivery support and postnatal care for mothers
+                    and their newborns.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">🏥</div>
+
+                <h3>Surgical Services</h3>
+
+                <p>
+                    Our surgical team provides professional surgical care,
+                    from pre-operative assessment through treatment and
+                    post-operative recovery.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">🦷</div>
+
+                <h3>Dental Care</h3>
+
+                <p>
+                    Our dental services support healthy teeth and gums
+                    through examinations, preventive care and appropriate
+                    dental treatments.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">🩻</div>
+
+                <h3>Radiology and Imaging</h3>
+
+                <p>
+                    Diagnostic imaging services assist our healthcare
+                    professionals in examining and monitoring different
+                    medical conditions.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="cta">
+
+        <h2>We're Here to Care for You</h2>
+
+        <p>
+            Need more information about our healthcare services?
+            Get in touch with Shiny Hunters Hospital today.
+        </p>
+
+        <a href="contact.html" class="btn">Contact Us</a>
+
+    </section>
+
+
+    <footer>
+
+        <p>&copy; 2026 Shiny Hunters Hospital. All Rights Reserved.</p>
+
+        <p>Quality Care • Compassion • Excellence</p>
+
+    </footer>
+
+</body>
+</html>
