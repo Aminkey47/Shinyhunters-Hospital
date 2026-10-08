@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Shiny Hunters Hospital</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #263238;
+            background: #F8FAFB;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: #FFFFFF;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #0B7285;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #F4A261;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #263238;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #0B7285;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: #DFF6F8;
+            padding: 70px 7%;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: #0B7285;
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .page-header p {
+            max-width: 720px;
+            margin: auto;
+            color: #52656D;
+            font-size: 17px;
+        }
+
+        /* Main Content */
+        .about-section {
+            padding: 60px 7%;
+        }
+
+        .about-container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            color: #0B7285;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #607078;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* Who We Are */
+        .who-we-are {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 35px;
+            align-items: stretch;
+            margin-bottom: 60px;
+        }
+
+        .about-card {
+            background: #FFFFFF;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .about-card h2 {
+            color: #0B7285;
+            font-size: 27px;
+            margin-bottom: 18px;
+        }
+
+        .about-card p {
+            color: #52656D;
+            margin-bottom: 15px;
+        }
+
+        .about-highlight {
+            background: #0B7285;
+            color: #FFFFFF;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-highlight h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .about-highlight p {
+            color: #E7F5F7;
+        }
+
+        /* Mission and Vision */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .mission-card,
+        .vision-card {
+            background: #FFFFFF;
+            padding: 32px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            border-top: 4px solid #0B7285;
+        }
+
+        .mission-card h2,
+        .vision-card h2 {
+            color: #0B7285;
+            margin-bottom: 15px;
+        }
+
+        .mission-card p,
+        .vision-card p {
+            color: #52656D;
+        }
+
+        /* Core Values */
+        .values-section {
+            margin-bottom: 60px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .value-card {
+            background: #FFFFFF;
+            padding: 28px 22px;
+            text-align: center;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-icon {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto 15px;
+            background: #DFF6F8;
+            color: #0B7285;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .value-card h3 {
+            color: #263238;
+            margin-bottom: 8px;
+        }
+
+        .value-card p {
+            color: #607078;
+            font-size: 14px;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            background: #DFF6F8;
+            padding: 45px;
+            border-radius: 14px;
+            margin-bottom: 60px;
+        }
+
+        .why-choose h2 {
+            text-align: center;
+            color: #0B7285;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .reason-card {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .reason-card h3 {
+            color: #0B7285;
+            margin-bottom: 10px;
+        }
+
+        .reason-card p {
+            color: #52656D;
+            font-size: 15px;
+        }
+
+        /* Call to Action */
+        .cta {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .cta h2 {
+            color: #0B7285;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            color: #607078;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #0B7285;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #095E6E;
+        }
+
+        /* Footer */
+        footer {
+            background: #064653;
+            color: #FFFFFF;
+            padding: 45px 7% 20px;
+        }
+
+        .footer-container {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 15px;
+            color: #FFFFFF;
+        }
+
+        .footer-column p {
+            color: #D7E8EB;
+            margin-bottom: 8px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column ul li a {
+            color: #D7E8EB;
+            text-decoration: none;
+        }
+
+        .footer-column ul li a:hover {
+            color: #F4A261;
+        }
+
+        .footer-bottom {
+            max-width: 1150px;
+            margin: 35px auto 0;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            color: #C8DDE0;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .who-we-are {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .reasons-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-header {
+                padding: 50px 5%;
+            }
+
+            .page-header h1 {
+                font-size: 34px;
+            }
+
+            .about-section {
+                padding: 40px 5%;
+            }
+
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+
+            .why-choose {
+                padding: 30px 20px;
+            }
+
+            .reasons-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 21px;
+            }
+
+            nav ul {
+                gap: 10px;
+                font-size: 14px;
+            }
+
+            .page-header h1 {
+                font-size: 30px;
+            }
+
+            .about-card,
+            .about-highlight,
+            .mission-card,
+            .vision-card {
+                padding: 25px 20px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            Shiny Hunters <span>Hospital</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>About Shiny Hunters Hospital</h1>
+        <p>
+            Compassionate healthcare, trusted professionals and quality
+            medical services focused on improving the health and wellbeing
+            of every patient we serve.
+        </p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="about-section">
+        <div class="about-container">
+
+            <!-- Who We Are -->
+            <section class="who-we-are">
+                <div class="about-card">
+                    <h2>Who We Are</h2>
+
+                    <p>
+                        Shiny Hunters Hospital is a modern healthcare facility
+                        committed to providing accessible, reliable and
+                        patient-centred medical care to individuals and families.
+                    </p>
+
+                    <p>
+                        Our hospital brings together qualified healthcare
+                        professionals, modern medical practices and a welcoming
+                        environment to ensure that every patient receives
+                        respectful and personalised care.
+                    </p>
+
+                    <p>
+                        From routine consultations and preventive care to
+                        specialised treatment and emergency support, our team
+                        works together to promote healthier lives and better
+                        outcomes for our patients.
+                    </p>
+                </div>
+
+                <div class="about-highlight">
+                    <h3>Healthcare You Can Trust</h3>
+                    <p>
+                        We believe quality healthcare begins with listening to
+                        our patients, understanding their needs and providing
+                        care with professionalism, compassion and integrity.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Mission & Vision -->
+            <section class="mission-vision">
+
+                <div class="mission-card">
+                    <h2>Our Mission</h2>
+                    <p>
+                        To provide high-quality, affordable and compassionate
+                        healthcare services through skilled professionals,
+                        responsible medical practices and a strong commitment
+                        to patient safety and satisfaction.
+                    </p>
+                </div>
+
+                <div class="vision-card">
+                    <h2>Our Vision</h2>
+                    <p>
+                        To be a trusted healthcare institution recognised for
+                        excellence in patient care, medical professionalism,
+                        innovation and positive impact within the community.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Core Values -->
+            <section class="values-section">
+                <div class="section-title">
+                    <h2>Our Core Values</h2>
+                    <p>
+                        The principles that guide how we care for our patients,
+                        work with our colleagues and serve our community.
+                    </p>
+                </div>
+
+                <div class="values-grid">
+
+                    <div class="value-card">
+                        <div class="value-icon">♥</div>
+                        <h3>Compassion</h3>
+                        <p>
+                            We treat every patient with kindness, empathy and
+                            understanding.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">✓</div>
+                        <h3>Integrity</h3>
+                        <p>
+                            We maintain honesty, transparency and ethical
+                            standards in everything we do.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">★</div>
+                        <h3>Excellence</h3>
+                        <p>
+                            We continuously strive to provide safe, effective
+                            and high-quality healthcare.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">+</div>
+                        <h3>Respect</h3>
+                        <p>
+                            We value the dignity, rights and individuality of
+                            every patient and staff member.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Why Choose Us -->
+            <section class="why-choose">
+                <h2>Why Choose Us</h2>
+
+                <div class="reasons-grid">
+
+                    <div class="reason-card">
+                        <h3>Qualified Professionals</h3>
+                        <p>
+                            Our healthcare team is committed to delivering
+                            professional and patient-focused medical care.
+                        </p>
+                    </div>
+
+                    <div class="reason-card">
+                        <h3>Patient-Centred Care</h3>
+                        <p>
+                            We listen to our patients and tailor our services
+                            to their individual healthcare needs.
+                        </p>
+                    </div>
+
+                    <div class="reason-card">
+                        <h3>Modern Healthcare</h3>
+                        <p>
+                            We embrace modern healthcare practices and
+                            technologies to improve the quality of treatment.
+                        </p>
+                    </div>
+
+                    <div class="reason-card">
+                        <h3>Comprehensive Services</h3>
+                        <p>
+                            We provide a range of healthcare services designed
+                            to support patients at different stages of life.
+                        </p>
+                    </div>
+
+                    <div class="reason-card">
+                        <h3>Safe Environment</h3>
+                        <p>
+                            Patient safety, privacy and comfort remain central
+                            to the care we provide.
+                        </p>
+                    </div>
+
+                    <div class="reason-card">
+                        <h3>Community Commitment</h3>
+                        <p>
+                            We are committed to contributing positively to the
+                            health and wellbeing of the community we serve.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="cta">
+                <h2>Your Health Matters to Us</h2>
+                <p>
+                    Get in touch with Shiny Hunters Hospital to learn more
+                    about our healthcare services or schedule an appointment.
+                </p>
+
+                <a href="contact.html" class="cta-button">
+                    Contact Us
+                </a>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-column">
+                <h3>Shiny Hunters Hospital</h3>
+                <p>
+                    Providing quality, compassionate and accessible
+                    healthcare services to our community.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p>+254 700 000 000</p>
+                <p>info@shinyhuntershospital.com</p>
+                <p>Kenya</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 Shiny Hunters Hospital. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
