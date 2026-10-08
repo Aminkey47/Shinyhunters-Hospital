@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Shiny Hunters Hospital | Services</title>
 
     <style>
@@ -14,8 +15,8 @@
 
         body {
             font-family: Arial, sans-serif;
-            color: #263238;
             background: #F8FAFB;
+            color: #263238;
             line-height: 1.6;
         }
 
@@ -85,24 +86,34 @@
 
         .service-card {
             background: white;
-            padding: 30px 25px;
             border-radius: 10px;
+            overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        .service-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
+        .service-card:hover {
+            transform: translateY(-5px);
         }
 
-        .service-card h3 {
+        .service-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-content h3 {
             color: #0B7285;
             margin-bottom: 12px;
             font-size: 20px;
         }
 
-        .service-card p {
+        .service-content p {
             font-size: 15px;
         }
 
@@ -175,7 +186,7 @@
 
     <header>
 
-        <div class="logo">🏥 Shiny Hunters Hospital</div>
+        <div class="logo">Shiny Hunters Hospital</div>
 
         <nav>
             <a href="index.html">Home</a>
@@ -213,106 +224,138 @@
         <div class="services-grid">
 
             <div class="service-card">
-                <div class="service-icon">🚑</div>
 
-                <h3>Emergency Care</h3>
+                <img src="images/emergency.jpg" alt="Emergency Care">
 
-                <p>
-                    Our emergency department provides prompt medical
-                    attention for patients with urgent illnesses,
-                    injuries and other medical emergencies.
-                </p>
+                <div class="service-content">
+                    <h3>Emergency Care</h3>
+
+                    <p>
+                        Our emergency department provides prompt medical
+                        attention for patients with urgent illnesses,
+                        injuries and other medical emergencies.
+                    </p>
+                </div>
+
             </div>
 
 
             <div class="service-card">
-                <div class="service-icon">🩺</div>
 
-                <h3>Outpatient Services</h3>
+                <img src="images/outpatient.jpg" alt="Outpatient Services">
 
-                <p>
-                    We provide consultations, diagnosis, treatment and
-                    follow-up care for patients who do not require
-                    hospital admission.
-                </p>
+                <div class="service-content">
+                    <h3>Outpatient Services</h3>
+
+                    <p>
+                        We provide consultations, diagnosis, treatment
+                        and follow-up care for patients who do not require
+                        hospital admission.
+                    </p>
+                </div>
+
             </div>
 
 
             <div class="service-card">
-                <div class="service-icon">🔬</div>
 
-                <h3>Laboratory Services</h3>
+                <img src="images/laboratory.jpg" alt="Laboratory Services">
 
-                <p>
-                    Our laboratory provides diagnostic testing that helps
-                    healthcare professionals accurately identify and
-                    manage medical conditions.
-                </p>
+                <div class="service-content">
+                    <h3>Laboratory Services</h3>
+
+                    <p>
+                        Our laboratory provides diagnostic testing that
+                        helps healthcare professionals accurately identify
+                        and manage medical conditions.
+                    </p>
+                </div>
+
             </div>
 
 
             <div class="service-card">
-                <div class="service-icon">💊</div>
 
-                <h3>Pharmacy</h3>
+                <img src="images/pharmacy.jpg" alt="Pharmacy">
 
-                <p>
-                    Our pharmacy provides prescribed medicines and
-                    professional guidance to help patients use their
-                    medication safely and effectively.
-                </p>
+                <div class="service-content">
+                    <h3>Pharmacy</h3>
+
+                    <p>
+                        Our pharmacy provides prescribed medicines and
+                        professional guidance to help patients use their
+                        medication safely and effectively.
+                    </p>
+                </div>
+
             </div>
 
 
             <div class="service-card">
-                <div class="service-icon">👶</div>
 
-                <h3>Maternity Care</h3>
+                <img src="images/maternity.jpg" alt="Maternity Care">
 
-                <p>
-                    We provide maternity services including antenatal
-                    care, delivery support and postnatal care for mothers
-                    and their newborns.
-                </p>
+                <div class="service-content">
+                    <h3>Maternity Care</h3>
+
+                    <p>
+                        We provide maternity services including antenatal
+                        care, delivery support and postnatal care for
+                        mothers and their newborns.
+                    </p>
+                </div>
+
             </div>
 
 
             <div class="service-card">
-                <div class="service-icon">🏥</div>
 
-                <h3>Surgical Services</h3>
+                <img src="images/surgery.jpg" alt="Surgical Services">
 
-                <p>
-                    Our surgical team provides professional surgical care,
-                    from pre-operative assessment through treatment and
-                    post-operative recovery.
-                </p>
+                <div class="service-content">
+                    <h3>Surgical Services</h3>
+
+                    <p>
+                        Our surgical team provides professional surgical
+                        care, from pre-operative assessment through
+                        treatment and post-operative recovery.
+                    </p>
+                </div>
+
             </div>
 
 
             <div class="service-card">
-                <div class="service-icon">🦷</div>
 
-                <h3>Dental Care</h3>
+                <img src="images/dental.jpg" alt="Dental Care">
 
-                <p>
-                    Our dental services support healthy teeth and gums
-                    through examinations, preventive care and appropriate
-                    dental treatments.
-                </p>
+                <div class="service-content">
+                    <h3>Dental Care</h3>
+
+                    <p>
+                        Our dental services support healthy teeth and gums
+                        through examinations, preventive care and
+                        appropriate dental treatments.
+                    </p>
+                </div>
+
             </div>
 
 
             <div class="service-card">
-                <div class="service-icon">🩻</div>
 
-                <h3>Radiology and Imaging</h3>
+                <img src="images/radiology.jpg" alt="Radiology and Imaging">
 
-                <p>
-                    Diagnostic imaging services assist our healthcare
-                    professionals in examining and monitoring different
-                    medical conditions.
-                </p>
+                <div class="service-content">
+                    <h3>Radiology and Imaging</h3>
+
+                    <p>
+                        Diagnostic imaging services assist our healthcare
+                        professionals in examining and monitoring
+                        different medical conditions.
+                    </p>
+                </div>
+
             </div>
 
         </div>
